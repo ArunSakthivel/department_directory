@@ -29,25 +29,25 @@
   <div ng-repeat="emp in employees | filter: empfilter" class="indemp">
     <a href="#" ng-click="empDetail(emp)">
       <img src="/assets/profile_pic/{{emp.pic}}" style="float:left;margin-right: 10px;" height="50" width="50">
-      <p class="list-item">{{emp.firstName + emp.lastName}}<br>{{emp.title}}</p>
+      <p class="list-item">{{emp.first_name + emp.last_name}}<br>{{emp.title}}</p>
     </a>
   </div>
 </div>
   </div>
   <div class="indiviualempList" ng-show="indvidualEmp && !contact">
   <div id="details" class="span7"><div><p><img src="/assets/profile_pic/{{empind.pic}}" height="160" width="160"></p>
-<h3>{{empind.firstName + empind.lastName}}</h3>
+<h3>{{empind.first_name + empind.last_name}}</h3>
 <h4>{{empind.title}}</h4>
 <br>
         <table class="table table-striped">
             
             <tbody><tr>
-                <td>{{empind.officePhone}}</td>
-                <td><i class="icon-home"></i> {{empind.cellPhone}}</td>
+                <td>{{empind.office_phone}}</td>
+                <td><i class="icon-home"></i> {{empind.cell_phone}}</td>
             </tr>
             <tr>
                 <td>Cell Phone:</td>
-                <td><i class="icon-headphones"></i> {{empind.cellPhone}}</td>
+                <td><i class="icon-headphones"></i> {{empind.cell_phone}}</td>
             </tr>
             <tr>
                 <td>Email:</td>
@@ -59,7 +59,7 @@
         
 </div></div>
   </div>  
-  <div class="indiviualempList" ng-show="contact && !indvidualEmp ">
+    <div class="indiviualempList" ng-show="contact && !indvidualEmp ">
   <div id="details" class="span7"><div><p><img src="/assets/profile_pic/{{contactDetails.pic}}" height="160" width="160"></p>
 <h3>{{contactDetails.firstName + contactDetails.lastName}}</h3>
 <h4>{{contactDetails.title}}</h4>
